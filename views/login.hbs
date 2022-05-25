@@ -1,0 +1,52 @@
+<main class="background">
+        {{!-- login box --}}
+        <div class="indexbox">
+            <div class="monitorLogin">
+                <div class="patientLogin">
+                    <i class="fa-solid fa-hospital-user"></i>
+                </div>
+                <div class="doctorLogin">
+                    <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div class="patientBotton">
+                    <div>
+                        Patient
+                    </div>
+                </div>
+                <div class="doctorBotton">
+                    <div>
+                    </div>
+                </div>
+            </div>
+                        {{!-- login form --}}
+            <form class="movingForm forPatient" action="" method="post">
+                {{#if message}}
+                    <div class="loginfail">
+                        {{message}}
+                    </div>
+                {{/if}}
+                <div class="logo">
+                    <h1>
+                        Diabetes
+                        <br>
+                        @Home
+                    </h1>
+                </div>
+                <div class="login">
+                    <input class="loginEmail" type="email" placeholder=" Email" required name="email">
+                    <input class="loginPassword" type="password" placeholder=" Password" required name="password">
+                    <input class="loginButton" type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </main>
+    {{!-- footer links --}}
+    <footer class="footerlinks">
+        <span class="link">
+            <a href="/patient/about_diabetes">ABOUT THE DIABETES</a>
+        </span>
+        <span class="moniter">&nbsp;|&nbsp;</span>
+        <span class="link">
+            <a href="/patient/about_website">ABOUT THIS WEBSITE</a>
+        </span>
+    </footer>

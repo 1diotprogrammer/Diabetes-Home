@@ -1,0 +1,92 @@
+<!-- side menu with icons-->
+     <div class="sidebar">
+        <!-- the link to home page -->
+        {{#with clientItem}}
+        <a href="/client/{{this._id}}/dashboard">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        {{/with}}
+         {{#with router}}
+        <div class="sidemenu">
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/overview">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="sidetitlie">Overview</div>
+                </div>
+            </a>
+            
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/data">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-database"></i></div>
+                    <div class="sidetitlie">Data</div>
+                </div>
+            </a>
+
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/personalization">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="sidetitlie">Personalization</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/notes">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-paste"></i></div>
+                    <div class="sidetitlie">Notes</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/comments">
+                <div class="bluebar">
+                    <div class="sideicon"><i class="fa-solid fa-comment"></i></div>
+                    <div class="sidetitlie">Comments</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/setup">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-user"></i></div>
+                    <div class="sidetitlie">User Setting</div>
+                </div>
+            </a>
+        </div>
+        {{/with}}
+    </div>
+    {{!-- main contain --}}
+    <div class="headname">
+        {{#with patientItem}}
+        <div class="patientname">
+            <h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.first_name}} {{this.last_name}}'s Comments
+            </h2>
+        </div>
+        {{/with}}
+        {{#with clientItem}}
+        <div class="clientname">
+            Dr.{{this.firstName}}&nbsp;&nbsp;
+        </div>
+        {{/with}}
+    </div>
+    <div class="mainbox">
+        <div class="list">
+            {{#each dataItem}}
+            {{#if this.bgl_comment}}
+            <div>{{this.bgl_comment}}  {{this.date}}</div>
+            {{/if}}
+            {{#if this.weight_comment}}
+            <div>{{this.weight_comment}}  {{this.date}}</div>
+            {{/if}}
+            {{#if this.dn_comment}}
+            <div>{{this.dn_comment}}  {{this.date}}</div>
+            {{/if}}
+            {{#if this.exercise_comment}}
+            <div>{{this.exercise_comment}}  {{this.date}}</div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>

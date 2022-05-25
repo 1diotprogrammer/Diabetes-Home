@@ -1,0 +1,138 @@
+ <!-- side menu with icons-->
+    <div class="sidebar">
+        <!-- the link to home page -->
+        {{#with clientItem}}
+        <a href="/client/{{this._id}}/dashboard">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        {{/with}}
+    
+         {{#with router}}
+        <div class="sidemenu">
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/overview">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="sidetitlie">Overview</div>
+                </div>
+            </a>
+            
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/data">
+                <div class="bluebar">
+                    <div class="sideicon"><i class="fa-solid fa-database"></i></div>
+                    <div class="sidetitlie">Data</div>
+                </div>
+            </a>
+
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/personalization">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="sidetitlie">Personalization</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/notes">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-paste"></i></div>
+                    <div class="sidetitlie">Notes</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/comments">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-comment"></i></div>
+                    <div class="sidetitlie">Comments</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/setup">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-user"></i></div>
+                    <div class="sidetitlie">User Setting</div>
+                </div>
+            </a>
+        </div>
+        {{/with}}
+
+    </div>
+    <div class="headname">
+        {{#with patientItem}}
+        <div class="patientname">
+            <h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.first_name}} {{this.last_name}}'s Data
+            </h2>
+        </div>
+        {{/with}}
+        {{#with clientItem}}
+        <div class="clientname">
+            Dr.{{this.firstName}}&nbsp;&nbsp;
+        </div>
+        {{/with}}
+    </div>
+    <div class="patientdata">
+        <table class="datatable">
+            <tr>
+                <th>Date</th>
+                <th>Blood Glucose Level</th>
+                <th>Weight</th>
+                <th>Dose Number</th>
+                <th>Exercise</th>
+            </tr>
+            {{#each dataItem}}
+            {{!-- patient detail  --}}
+            <tr onClick="location.href=''">
+                <td>{{this.date}}</td>
+
+                {{#if this.bgl_requested}}
+                {{!-- if today's data is filled  --}}
+                {{#if (beFilled this.bgl)}}
+                {{!-- if today's data out of limit values show highlight --}}
+                <td {{#if (inInterval this.bgl_min this.bgl
+                    this.bgl_max)}}{{else}}class="highlight" {{/if}}>{{this.bgl}}</td>
+                {{else}}
+                {{!-- if today's data is not filled show below --}}
+                <td>No Update</td>
+                {{/if}}
+                {{else}}
+                <td>-</td>
+                {{/if}}
+
+                {{#if this.weight_requested}}
+                {{#if (beFilled this.weight)}}
+                <td {{#if (inInterval this.weight_min this.weight
+                    this.weight_max)}}{{else}}class="highlight" {{/if}}>{{this.weight}}</td>
+                {{else}}
+                <td>No Update</td>
+                {{/if}}
+                {{else}}
+                <td>-</td>
+                {{/if}}
+
+                {{#if this.dn_requested}}
+                {{#if (beFilled this.dn)}}
+                <td {{#if (inInterval this.dn_min this.dn
+                    this.dn_max)}}{{else}}class="highlight" {{/if}}>{{this.dn}}</td>
+                {{else}}
+                <td>No Update</td>
+                {{/if}}
+                {{else}}
+                <td>-</td>
+                {{/if}}
+                {{#if this.exercise_requested}}
+                {{#if (beFilled this.exercise)}}
+                <td {{#if (inInterval this.exercise_min this.exercise
+                    this.exercise_max)}}{{else}}class="highlight" {{/if}}>{{this.exercise}}</td>
+                {{else}}
+                <td>No Update</td>
+                {{/if}}
+                {{else}}
+                <td>-</td>
+                {{/if}}
+            </tr>
+            {{/each}}
+        </table>
+    </div>

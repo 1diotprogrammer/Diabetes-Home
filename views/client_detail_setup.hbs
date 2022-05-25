@@ -1,0 +1,113 @@
+<!-- side menu with icons-->
+    <div class="sidebar">
+        <!-- the link to home page -->
+        {{#with clientItem}}
+        <a href="/client/{{this._id}}/dashboard">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        {{/with}}
+
+        {{#with router}}
+        <div class="sidemenu">
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/overview">
+                <div  class="bluebar">
+                    <div class="sideicon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="sidetitlie">Overview</div>
+                </div>
+            </a>
+            
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/data">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-database"></i></div>
+                    <div class="sidetitlie">Data</div>
+                </div>
+            </a>
+
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/personalization">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="sidetitlie">Personalization</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/notes">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-paste"></i></div>
+                    <div class="sidetitlie">Notes</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/comments">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-comment"></i></div>
+                    <div class="sidetitlie">Comments</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/setup">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-user"></i></div>
+                    <div class="sidetitlie">User Setting</div>
+                </div>
+            </a>
+        </div>
+        {{/with}}
+    </div>
+    <div class="headname">
+        <div class="patientname">
+        {{#with patientItem}}
+            <h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.first_name}} {{this.last_name}}'s Setting
+            </h2>
+        {{/with}}
+        </div>
+        
+        {{#with clientItem}}
+        <div class="clientname">
+            Dr.{{this.firstName}}&nbsp;&nbsp;
+        </div>
+        {{/with}}
+    </div>
+    {{!-- patient detail showed --}}
+    <div class="mainbox">
+        <div class="detailbox">
+            <img src="/image/pic_washinghands.jpg" alt="">
+            <form action="" method="post">
+                {{#with patientItem}}
+                <div class="shortinput">
+                    First Name
+                    <input type="text" placeholder={{this.first_name}}>
+                </div>
+                <div class="shortinput">
+                    Last Name
+                    <input type="text" placeholder={{this.last_name}}>
+                </div>
+                <div class="shortinput">
+                    Age
+                    <input type="number" placeholder="">
+                </div>
+                <div class="longinput">
+                    Date of Birth
+                    <br>
+                    <input type="date" placeholder={{this.dob}}>
+                </div>
+                <div class="longinput">
+                    Email
+                    <br>
+                    <input type="email" placeholder={{this.email}}>
+                </div>
+                <div class="longinput">
+                    Password
+                    <br>
+                    <input type="text" placeholder="Least 8 characters" name="password">
+                </div>
+                {{/with}}
+                <input type="submit" value="Save" class="save">
+            </form>
+        </div>
+    </div>

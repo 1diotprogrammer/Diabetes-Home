@@ -1,0 +1,92 @@
+{{!-- backgorund with darkmode --}}
+<div {{#if patient.darkmod}}class="gradientBackgroud gradientBackgroud_dark"{{else}}class="gradientBackgroud"{{/if}}>
+        <div {{#if patient.darkmod}} class="returnbutton returnbutton_dark"{{else}}class="returnbutton" {{/if}}>
+            {{#with patient}}
+            <a href="/patient/{{this._id}}/homepage">
+                <b>
+                    <i class="fas fa-angle-left"></i>
+                </b>
+            </a>
+        </div>
+        <div {{#if this.darkmod}}class="logo logo_dark"{{else}}class="logo"{{/if}}>
+            <a href="/patient/{{this._id}}/homepage">
+                <b>
+                    Diabetes@Home
+                </b>
+            </a>
+            {{/with}}
+        </div>
+        {{!-- search bar --}}
+        <div class="searchingbar">
+            <form action="" method="post">
+                <i {{#if patient.darkmod}} class ="fa-solid fa-magnifying-glass dark"{{else}}class ="fa-solid fa-magnifying-glass"{{/if}}></i>
+                <input class="date" type="date" name = "date" {{#with today}}value={{this}}{{/with}}>
+                <input class="search_button" type="submit" >
+                <div class="datatable">
+                    <br>
+                    {{#if notFound}}
+                        <div>Blood Glucose Level:
+                            <div><span class="">-</span> nmol/L</div>
+                        </div>
+                        <div>Weight:
+                            <div><span class="">-</span> kg</div>
+                        </div>
+                        <div>Dose Number:
+                            <div><span class="">-</span></div>
+                        </div>
+                        <div>Exercise:
+                            <div><span class="">-</span> steps</div>
+                        </div>
+                    {{else}}
+                            <div>Blood Glucose Level:
+                        {{#with todayData}}
+                            {{#if (beFilled this.bgl) }}
+                            <div><span class="">
+                                {{this.bgl}}
+                            </span> nmol/L</div>
+                            {{else}}
+                                <div><span class="">
+                                    -
+                                </span> nmol/L</div>
+                            {{/if}}
+                        </div>
+                        <div>Weight:
+                            {{#if (beFilled this.weight) }}
+                            <div><span class="">
+                                {{this.weight}}
+                            </span> kg</div>
+                            {{else}}
+                                <div><span class="">
+                                -
+                                </span> kg</div>
+                            {{/if}}
+                        </div>
+                        <div>Dose Number:
+                            {{#if (beFilled this.dn) }}
+                            <div><span class="">
+                                {{this.dn}}
+                            </span>times</div>
+                            {{else}}
+                            <div><span class="">
+                                -
+                                </span> times</div>
+                            {{/if}}
+                        </div>
+                        <div>Exercise:
+                            {{#if (beFilled this.exercise) }}
+                            <div><span class="">
+                                {{this.exercise}}
+                            </span> steps</div>
+                            {{else}}
+                            <div><span class="">
+                                -
+                                </span> steps</div>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+
+                    {{/if}}
+                </div>
+            </form>
+        </div>
+    </div>

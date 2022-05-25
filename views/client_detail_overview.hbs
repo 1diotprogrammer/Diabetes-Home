@@ -1,0 +1,184 @@
+<!-- side menu with icons-->
+    <div class="sidebar">
+         <!-- the link to home page -->
+         {{#with clientItem}}
+        <a href="/client/{{this._id}}/dashboard">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        {{/with}}
+
+        {{#with router}}
+        <div class="sidemenu">
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/overview">
+                <div class="bluebar">
+                    <div class="sideicon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="sidetitlie">Overview</div>
+                </div>
+            </a>
+            
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/data">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-database"></i></div>
+                    <div class="sidetitlie">Data</div>
+                </div>
+            </a>
+
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/personalization">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="sidetitlie">Personalization</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/notes">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-paste"></i></div>
+                    <div class="sidetitlie">Notes</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/comments">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-comment"></i></div>
+                    <div class="sidetitlie">Comments</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/setup">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-user"></i></div>
+                    <div class="sidetitlie">User Setting</div>
+                </div>
+            </a>
+        </div>
+        {{/with}}
+    </div>
+    <main class="main_personaldata">
+        <!-- personal detail -->
+        <div class="mainbox_personaldata">
+            {{#with patientItem}}
+            <div class="patientname_mainbox">
+                <h2>
+                    {{this.first_name}} {{this.last_name}}
+                </h2>
+            </div>
+            {{/with}}
+            <div class="personaldetail_mainbox">
+                <div class="title_personaldetail">
+                    <h3>
+                        Personal Detail
+                    </h3>
+                </div>
+                <div>
+                    <!-- datas -->
+                    <div class="weight_personaldetail">
+                        <div class="topleft">
+                            Weight
+                        </div>
+                        {{#with oneItem}}
+                        <div class="bottom">
+                            {{#if this.checkedItem.weightItem}}
+                                {{this.data.weight}}
+                            {{else}}
+                                ---
+                            {{/if}}
+                            <div>
+                                kg
+                            </div>
+                        </div>
+                        {{/with}}
+                    </div>
+                    <div class="bgl_personaldetail">
+                        <div class="topleft">
+                            Blood Glucose Level
+                        </div>
+                        {{#with oneItem}}
+                        <div class="bottom">
+                            {{#if this.checkedItem.bglItem}}
+                                {{this.data.bgl}}
+                            {{else}}
+                                ---
+                            {{/if}}
+                            <div>
+                                nmol/L
+                            </div>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+                <div>
+                    <div class="exercise_personaldetail">
+                        <div class="topleft">
+                            Exercise
+                        </div>
+                        {{#with oneItem}}
+                        <div class="bottom">
+                            {{#if this.checkedItem.exerciseItem}}
+                                {{this.data.exercise}}
+                            {{else}}
+                            ---
+                            {{/if}}
+                            <div>
+                                steps
+                            </div>
+                        </div>
+                        {{/with}}
+                    </div>
+                    <div class="dosenumber_personaldetail">
+                        {{#with oneItem}}
+                        <div class="topleft">
+                            Dose Number
+                        </div>
+                        <div class="bottom">
+                            {{#if this.checkedItem.dnItem}}
+                                {{this.data.dn}}
+                            {{else}}
+                            ---
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+            <div class="linegraph_patientdata">
+                <!-- linegraph area -->
+            </div>
+        </div>
+    </main>
+    <!-- right side about feedback -->
+    <div class="feedbackside">
+        {{#with clientItem}}
+        <div class="clientname">
+            Dr.{{this.firstName}}&nbsp;&nbsp;
+        </div>
+        {{/with}}
+        <div class="note_feedbackside">
+            <div>
+                <b>
+                    Note
+                </b>
+            </div>
+            <!-- submit note -->
+            <form action="" method="post">
+                <textarea name="notes" class="note_input" cols="30" rows="10"></textarea>
+                <input type="submit" value="Post" class="postbuttom_input" name="input_notes">
+            </form>
+        </div>
+        <div class="message_feedbackside">
+            <div>
+                <b>
+                    Support Message
+                </b>
+            </div>
+            <!-- submit message -->
+            <form action="" method="post">
+                <textarea name="messages" class="message_input" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send" class="sendbuttom_input" name="input_messages">
+            </form>
+        </div>
+    </div>

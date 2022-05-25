@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalDetail</title>
+    <!-- initialization -->
+
+    <!-- Height collapse problems solving -->
+    <link rel="stylesheet" href="../../public/css/clearfix.css">
+
+    <!-- reset the border and padding of the web page -->
+    <link rel="stylesheet" href="../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../public/css/reset.css">
+
+    <!-- font icon from free website "fontawesome" -->
+    <link rel="stylesheet" href="../../public/css/font_icon6/css/all.css">
+
+    <link rel="stylesheet" href="../../public/css/patient_gradientBackgroud.css">
+    <link rel="stylesheet" href="../../public/css/patient_personal_detail.css">
+
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+
+<body>
+    <div class="gradientBackgroud">
+        <div class="returnbutton">
+            <a href="./patient_homepage.html">
+                <b>
+                    <i class="fas fa-angle-left"></i>
+                </b>
+            </a>
+        </div>
+        <div class="logo">
+            <a href="./patient_homepage.html">
+                <b>
+                    Diabetes@Home
+                </b>
+            </a>
+        </div>
+        <div class="colorscheme">
+            <!-- change customer light mode and dark mode -->
+            <a href="">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+        </div>
+        <!-- set the personal detail -->
+        <form action="" method="post" class="dark">
+            <div class="personalFirstName">
+                First name
+                <br><br>
+                <input class="inputPersonalFirstName" type="text" readonly>
+            </div>
+            <div class="personalLastName">
+                Last name
+                <br><br>
+                <input class="inputPersonalLastName" type="text" readonly>
+            </div>
+            Screen Name
+            <br><br>
+            <input class="inputPersonalScreenName" type="text">
+            <br><br><br>
+            <!-- email will be lock and can not be changed, but still showed to user -->
+            Email
+            <br><br>
+            <input class="inputPersonalEmail" type="email" readonly>
+            <br><br><br>
+            <!-- 
+                Date of birth can choose from the table of website, 
+                and the language is follow to the browser setting 
+            -->
+            Date of Birth
+            <span class="datefont">
+                (YYYY/MM/DD)
+            </span>
+            <br><br>
+            <input class="inputPersonalBirth" type="date">
+            <br><br><br>
+            A Brief Text Bio
+            <br><br>
+            <textarea class="inputTextBio" cols="30" rows="10"></textarea>
+            <br><br><br>
+            <input class="savePersonalDetail" type="submit" value="Save">
+            <!-- button to reset password -->
+            <a href="./reset_password.html">
+                <div class="resetpasswordPersonalDetail">
+                    Reset Password
+                </div>
+            </a>
+            <!-- go to the login page and sign out -->
+            <a href="./index.html">
+                <div class="signout">
+                    Sign out
+                </div>
+            </a>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<header class="headbar">
+    <a href="">
+        <div class="logo">
+            <h3>
+               <b>
+                   Diabetes
+                   <br>
+                   @Home
+               </b>
+            </h3>
+        </div>
+    </a>
+    {{#with clinician}}
+    <div class="clientname">
+        <h2>
+            <b>
+                {{this.firstName}}
+            </b>
+        </h2>
+        <!-- Go back to the login page -->
+            <a href="/client/logout" class="signout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+    </div>
+    
+    <!-- help new patient to register -->
+    <div class="registration_headbar">
+        <a href="/client/{{this._id}}/registerpatient">
+            <b>
+                Registration
+            </b>
+        </a>
+    </div>
+    
+    <div class="comment_headbar">
+        <a href="/client/{{this._id}}/overallcomments">
+            <b>
+                Comment
+            </b>
+        </a>
+    </div>
+    {{/with}}
+</header>
+<main class="main_dashboard">
+    <!-- searching by name -->
+    <form action="" method="post" class="searching_form">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="name" placeholder="Name">
+        <input type="submit" class="search_button" value="Search">
+        <div>
+            <div class="registerboard">
+                <b>
+                    Today's Absence
+                </b>
+                
+                <div class="absencelist">
+                    {{#each absent}}
+                    <a href="/client/{{this.clientId}}/{{this.patientId}}/overview">
+                        <div>
+                            {{this.name}}
+                        </div>
+                    </a>
+                    {{/each}}
+                </div>
+                
+            </div>
+        </div>
+
+    </form>
+    <!-- data table -->
+    <div class="data_dashboard">
+        <table class="datatable">
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Blood Glucose Level</th>
+                <th>Weight</th>
+                <th>Dose Number</th>
+                <th>Exercise</th>
+            </tr>
+            {{#each patientList}}
+            <tr onClick="location.href='/client/{{this.client_id}}/{{this.patient_id}}/overview'">
+                <td>{{this.first_name}}</td>
+                <td>{{this.date}}</td>
+
+                {{#if this.bgl_requested}}
+                {{!-- if today's data is filled  --}}
+                    {{#if (beFilled this.bgl)}}
+                    {{!-- if today's data out of limit values show highlight --}}
+                    <td {{#if (inInterval this.bgl_min this.bgl this.bgl_max)}}{{else}}class="highlight" {{/if}}>{{this.bgl}}</td>
+                    {{else}}
+                    {{!-- if today's data is not filled show below --}}
+                    <td>No Update</td>
+                    {{/if}}
+                {{else}}
+                <td>-</td>
+                {{/if}}
+
+                {{#if this.weight_requested}}
+                    {{#if (beFilled this.weight)}}
+                    <td {{#if (inInterval this.weight_min this.weight this.weight_max)}}{{else}}class="highlight" {{/if}}>{{this.weight}}</td>
+                    {{else}}
+                    <td>No Update</td>
+                    {{/if}}
+                {{else}}
+                    <td>-</td>
+                {{/if}}
+
+                {{#if this.dn_requested}}
+                    {{#if (beFilled this.dn)}}
+                    <td {{#if (inInterval this.dn_min this.dn this.dn_max)}}{{else}}class="highlight" {{/if}}>{{this.dn}}</td>
+                    {{else}}
+                    <td>No Update</td>
+                    {{/if}}
+                {{else}}
+                <td>-</td>
+                {{/if}}
+                {{#if this.exercise_requested}}
+                    {{#if (beFilled this.exercise)}}
+                    <td {{#if (inInterval this.exercise_min this.exercise
+                        this.exercise_max)}}{{else}}class="highlight" {{/if}}>{{this.exercise}}</td>
+                    {{else}}
+                    <td>No Update</td>
+                    {{/if}}
+                {{else}}
+                <td>-</td>
+                {{/if}}
+            </tr>
+            {{/each}}
+
+        </table>
+    </div>
+</main>
+<!-- total patient -->
+<footer class="totalPatients">
+    {{#with clinician}}
+    Total: {{this.totalCustomer}} patients
+    {{/with}}
+</footer>

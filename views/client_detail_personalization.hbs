@@ -1,0 +1,127 @@
+<!-- side menu with icons-->
+    <div class="sidebar">
+        <!-- the link to home page -->
+        {{#with clientItem}}
+        <a href="/client/{{this._id}}/dashboard">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        {{/with}}
+    
+         {{#with router}}
+        <div class="sidemenu">
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/overview">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="sidetitlie">Overview</div>
+                </div>
+            </a>
+            
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/data">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-database"></i></div>
+                    <div class="sidetitlie">Data</div>
+                </div>
+            </a>
+
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/personalization">
+                <div class="bluebar">
+                    <div class="sideicon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="sidetitlie">Personalization</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/notes">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-paste"></i></div>
+                    <div class="sidetitlie">Notes</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/comments">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-comment"></i></div>
+                    <div class="sidetitlie">Comments</div>
+                </div>
+            </a>
+            <a href="/client/{{this.clinicianId}}/{{this.patientId}}/setup">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-user"></i></div>
+                    <div class="sidetitlie">User Setting</div>
+                </div>
+            </a>
+        </div>
+        {{/with}}
+
+    </div>
+    <div class="headname">
+        {{#with patientItem}}
+        <div class="patientname">
+            <h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.first_name}} {{this.last_name}}'s Requirement
+            </h2>
+        </div>
+        {{/with}}
+        {{#with clientItem}}
+        <div class="clientname">
+            Dr.{{this.firstName}}&nbsp;&nbsp;
+       </div>
+        {{/with}}
+    </div>
+    {{#with patientItem}}
+    <form action="" method="post">
+        <div class="mainbox">
+            <div class="requirementbox">
+                <div class="requirement_title">
+                    <div>Data Type</div>
+                    <div>Safe Range</div>
+                </div>
+                <!-- use different name attribute in the input to get the data -->
+                <div class="bgl">
+                    {{!-- for checkboxs --}}
+                    <input name="bgl_check" type="checkbox" class="checkbox" {{#if this.bgl_requested}} checked="true"{{/if}}>
+                    <div class="title">
+                        Blood Glucose Level
+                    </div>
+                    <input name="bgl_min" min="0" max="40" type="number" placeholder="{{this.bgl_min}} nmol/L">
+                    <span>~</span>
+                    <input name="bgl_max" min="0" max="40" type="number" placeholder="{{this.bgl_max}} nmol/L">
+                </div>
+                <div class="weight">
+                    <input name="weight_check" type="checkbox" class="checkbox" {{#if this.weight_requested}} checked="true"{{/if}}>
+                    <div class="title">
+                        Weight
+                    </div>
+                    <input name="weight_min" min="0" max="200" type="number" placeholder="{{this.weight_min}} kg">
+                    <span>~</span>
+                    <input name="weight_max" min="0" max="200" type="number" placeholder="{{this.weight_max}} kg">
+                </div>
+                <div class="dn">
+                    <input name="dn_check" type="checkbox" class="checkbox" {{#if this.dn_requested}} checked="true"{{/if}}>
+                    <div class="title">
+                        Dose Number
+                    </div>
+                    <input name="dn_min"min="0" max="10" type="number" placeholder={{this.dn_min}}>
+                    <span>~</span>
+                    <input name="dn_max" min="0" max="10" type="number" placeholder={{this.dn_max}}>
+                </div>
+                <div class="exercise">
+                    <input name="exercise_check" type="checkbox" class="checkbox" {{#if this.exercise_requested}} checked="true"{{/if}}>
+                    <div class="title">
+                        Exercise
+                    </div>
+                    <input name="exercise_min" min="0" max="50000" type="number" placeholder="{{this.exercise_min}} steps">
+                    <span>~</span>
+                    <input name="exercise_max" min="0" max="50000" type="number" placeholder="{{this.exercise_max}} steps">
+                </div>
+            </div>
+        </div>
+        {{!-- submit --}}
+        <input type="submit" value="Save" class="save">
+    </form>
+    {{/with}}

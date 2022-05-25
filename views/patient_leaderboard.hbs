@@ -1,0 +1,104 @@
+<div {{#if patient.darkmod}}class="gradientBackgroud gradientBackgroud_dark"{{else}}class="gradientBackgroud"{{/if}}>
+    <div {{#if patient.darkmod}} class="returnbutton returnbutton_dark"{{else}}class="returnbutton" {{/if}}>
+        {{#with patient}}
+        <a href="/patient/{{this._id}}/homepage">
+            {{/with}}
+            <b>
+                <i class="fas fa-angle-left"></i>
+            </b>
+        </a>
+    </div>
+    <div {{#if patient.darkmod}}class="logo logo_dark"{{else}}class="logo"{{/if}}>
+        {{#with patient}}
+        <a href="/patient/{{this._id}}/homepage">
+            {{/with}}
+            <b>
+                Diabetes@Home
+            </b>
+        </a>
+    </div>
+    {{!-- ranking board --}}
+    <div class="rankingboard">
+        <div class="rank">
+            Rank
+        </div>
+        {{#with firstRank}}
+            <div class="firstplace">
+                {{#if this.exist}}
+                <i class="fa-solid fa-crown gold"></i>
+                <sapn class="rankname">{{this.first_name}}</sapn>
+                <span>{{this.percentage}}%</span>
+                {{else}}
+                    <i class="fa-solid fa-crown gold"></i>
+                    <sapn class="rankname">-</sapn>
+                    <span>-</span>
+                {{/if}}
+            </div>
+        {{/with}}
+        
+        <div class="secondplace">
+            {{#with secondRank}}
+                {{#if this.exist}}
+                <i class="fa-solid fa-crown silver"></i>
+                <sapn class="rankname">{{this.first_name}}</sapn>
+                <span>{{this.percentage}}%</span>
+                {{else}}
+                 <i class="fa-solid fa-crown copper"></i>
+                <sapn class="rankname">-</sapn>
+                <span>-</span>
+                {{/if}}
+            {{/with}}
+        </div>
+        
+        <div class="thirdplace">
+            {{#with thirdRank}}
+                {{#if this.exist}}
+                    <i class="fa-solid fa-crown copper"></i>
+                    <span class="rankname">{{this.first_name}}</span>
+                    <span>{{this.percentage}}%</span>
+                {{else}}
+                    <i class="fa-solid fa-crown copper"></i>
+                    <span class="rankname">-</span>
+                    <span>-</span>
+                {{/if}}
+            {{/with}}
+        </div>
+        <div class="forthplace">
+            {{#with fourthRank}}
+                {{#if this.exist}}
+                    <span>4.</span>
+                    <span class="rankname">{{this.first_name}}</span>
+                    <span>{{this.percentage}}%</span>
+                {{else}}
+                    <span>4.</span>
+                    <span class="rankname">-</span>
+                    <span>-</span>
+                {{/if}}
+            {{/with}}
+        </div>
+        <div class="fifthplace">
+            {{#with fifthRank}}
+                {{#if this.exist}}
+                    <span>5.</span>
+                    <span class="rankname">{{this.first_name}}</span>
+                    <span>{{this.percentage}}%</span>
+                {{else}}
+                    <span>5.</span>
+                    <span class="rankname">-</span>
+                    <span>-</span>
+                {{/if}}
+            {{/with}}
+        </div>
+        {{!-- own ranking --}}
+        <div class="rank">
+            You
+        </div>
+        <div class="yourplace">
+            {{#with patient}}
+                <span>EG</span>
+                <span class="rankname">{{this.screenName}}</span>
+                <span>{{this.percentage}}%</span>
+            {{/with}}
+        </div>
+    </div>
+</div>

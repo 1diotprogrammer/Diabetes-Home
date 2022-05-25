@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../public/css/clearfix.css">
+    <link rel="stylesheet" href="../../public/css/font_icon6/css/all.css">
+
+    <link rel="stylesheet" href="../../public/css/client_sidemenu.css">
+    <link rel="stylesheet" href="../../public/css/client_overview.css">
+
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+
+<body>
+    <!-- side menu with icons-->
+    <div class="sidebar">
+        <!-- the link to home page -->
+        <a href="./client_dashboard.html">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        <div class="sidemenu">
+            <!-- side menu -->
+            <a href="./client_overview.html">
+                <div class="bluebar">
+                    <div class="sideicon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="sidetitlie">Overview</div>
+                </div>
+            </a>
+            <a href="./client_patientdata.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-database"></i></div>
+                    <div class="sidetitlie">Data</div>
+                </div>
+            </a>
+            <a href="./client_personalization.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="sidetitlie">Personalization</div>
+                </div>
+            </a>
+            <a href="./client_notes.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-paste"></i></div>
+                    <div class="sidetitlie">Notes</div>
+                </div>
+            </a>
+            <a href="./clinet_comment.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-comment"></i></div>
+                    <div class="sidetitlie">Comments</div>
+                </div>
+            </a>
+            <a href="./client_setting.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-user"></i></div>
+                    <div class="sidetitlie">User Setting</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <main class="main_personaldata">
+        <!-- personal detail -->
+        <div class="mainbox_personaldata">
+            <div class="patientname_mainbox">
+                <h2>
+                    Kim Kardashian
+                </h2>
+            </div>
+            <div class="personaldetail_mainbox">
+                <div class="title_personaldetail">
+                    <h3>
+                        Personal Detail
+                    </h3>
+                </div>
+                <div>
+                    <!-- datas -->
+                    <div class="weight_personaldetail">
+                        <div class="topleft">
+                            Weight
+                        </div>
+                        <div class="bottom">
+                            90
+                            <div>
+                                kg
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bgl_personaldetail">
+                        <div class="topleft">
+                            Blood Glucose Level
+                        </div>
+                        <div class="bottom">
+                            24
+                            <div>
+                                nmol/L
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="exercise_personaldetail">
+                        <div class="topleft">
+                            Exercise
+                        </div>
+                        <div class="bottom">
+                            20000
+                            <div>
+                                steps
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dosenumber_personaldetail">
+                        <div class="topleft">
+                            Dose Number
+                        </div>
+                        <div class="bottom">
+                            6
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- right side about feedback -->
+    <div class="feedbackside">
+        <div class="clientname">
+            Dr.Jay&nbsp;&nbsp;
+        </div>
+        <div class="note_feedbackside">
+            <div>
+                <b>
+                    Note
+                </b>
+            </div>
+            <!-- submit note -->
+            <form action="" method="post">
+                <textarea class="note_input" cols="30" rows="10"></textarea>
+                <input type="submit" value="Post" class="postbuttom_input">
+            </form>
+        </div>
+        <div class="message_feedbackside">
+            <div>
+                <b>
+                    Support Message
+                </b>
+            </div>
+            <!-- submit message -->
+            <form action="" method="post">
+                <textarea class="message_input" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send" class="sendbuttom_input">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<header class="headbar">
+        <!-- link web iftself for refreshing -->
+        {{#with clinician}}
+        <a href="/client/{{this._id}}/dashboard">
+        {{/with}}
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        {{#with clinician}}
+        <div class="clientname">
+        <h2>
+            <b>
+                {{this.firstName}}
+            </b>
+        </h2>
+        <!-- Go back to the login page -->
+            <a href="/client/logout" class="signout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+        </div>
+    {{/with}}
+        <!-- help new patient to register -->
+         
+        <div class="registration_headbar">
+            <a href="">
+                <b>
+                    Registration
+                </b>
+            </a>
+        </div>
+        {{#with clinician}}
+        <div class="comment_headbar">
+            <a href="/client/{{this._id}}/overallcomments">
+                <b>
+                    Comment
+                </b>
+            </a>
+        </div>
+        {{/with}}
+    </header>
+    {{!-- register form --}}
+    <main class="mainbox">
+        <div class="detailbox">
+            <img src="/image/pic_washinghands.jpg" alt="">
+            <form action="" method="post">
+                <div class="shortinput">
+                    First Name
+                    <input type="text" name = "first_name">
+                </div>
+                <div class="shortinput">
+                    Last Name
+                    <input type="text" name = "last_name">
+                </div>
+                <div class="shortinput">
+                    Age
+                    <input type="number" name = "age">
+                </div>
+                <div class="longinput">
+                    Date of Birth
+                    <br>
+                    <input type="date" name="dob">
+                </div>
+                <div class="longinput">
+                    Email
+                    <br>
+                    <input type="email" name="email">
+                </div>
+                <input type="submit" value="Register" class="register">
+            </form>
+        </div>
+    </main>

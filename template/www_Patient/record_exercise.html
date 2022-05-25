@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+
+    <!-- initialization -->
+
+    <!-- Height collapse problems solving -->
+    <link rel="stylesheet" href="../../public/css/clearfix.css">
+
+    <!-- reset the border and padding of the web page -->
+    <link rel="stylesheet" href="../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../public/css/reset.css">
+
+
+    <!-- font icon from free website "fontawesome" -->
+    <link rel="stylesheet" href="../../public/css/font_icon6/css/all.css">
+
+
+    <link rel="stylesheet" href="../../public/css/patient_gradientBackgroud.css">
+    <link rel="stylesheet" href="../../public/css/patient_record_datas.css">
+
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+
+<body>
+    <div class="gradientBackgroud">
+
+        <div class="returnbutton">
+            <a href="./patient_record.html">
+                <b>
+                    <i class="fas fa-angle-left"></i>
+                </b>
+            </a>
+        </div>
+        <div class="logo">
+            <a href="./patient_homepage.html">
+                <b>
+                    Diabetes@Home
+                </b>
+            </a>
+        </div>
+        <div class="colorscheme">
+            <!-- change customer light mode and dark mode -->
+            <a href="">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+        </div>
+        <!-- local time -->
+        <div class="date">
+            <script>
+                var date = new Date();
+                var month = parseInt(date.getMonth()) + 1
+                document.querySelector(".date").innerHTML = date.getDate() + "/" + month + "/" + date.getFullYear();
+            </script>
+        </div>
+        <!-- input value and comment -->
+        <form method="post" action="" class="dark">
+            Exercise
+            <br><br>
+            <input class="inputData" min="0" max="99999" type="number" name="Data" autocomplete="off" autofocus required>
+            steps
+            <br><br>
+            Comment
+            <br><br>
+            <textarea name="Comment" class="inputComment" cols="30" rows="10"></textarea>
+            <input class="save" type="submit" value="Save">
+        </form>
+    </div>
+
+</body>
+
+</html>

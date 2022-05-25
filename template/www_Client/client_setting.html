@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../public/css/clearfix.css">
+    <link rel="stylesheet" href="../../public/css/font_icon6/css/all.css">
+
+    <link rel="stylesheet" href="../../public/css/client_sidemenu.css">
+    <link rel="stylesheet" href="../../public/css/client_head_name.css">
+    <link rel="stylesheet" href="../../public/css/client_setting.css">
+
+    <link rel="icon" href="../../favicon.ico">
+
+
+</head>
+
+<body>
+    <!-- side menu with icons-->
+    <div class="sidebar">
+        <!-- the link to home page -->
+        <a href="./client_dashboard.html">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        <div class="sidemenu">
+            <a href="./client_overview.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="sidetitlie">Overview</div>
+                </div>
+            </a>
+            <a href="./client_patientdata.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-database"></i></div>
+                    <div class="sidetitlie">Data</div>
+                </div>
+            </a>
+            <a href="./client_personalization.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="sidetitlie">Personalization</div>
+                </div>
+            </a>
+            <a href="./client_notes.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-paste"></i></div>
+                    <div class="sidetitlie">Notes</div>
+                </div>
+            </a>
+            <a href="./clinet_comment.html">
+                <div>
+                    <div class="sideicon"><i class="fa-solid fa-comment"></i></div>
+                    <div class="sidetitlie">Comments</div>
+                </div>
+            </a>
+            <a href="./client_setting.html">
+                <div class="bluebar">
+                    <div class="sideicon"><i class="fa-solid fa-user"></i></div>
+                    <div class="sidetitlie">User Setting</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="headname">
+        <div class="patientname">
+            <h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xiaomei Wang's Setting
+            </h2>
+        </div>
+        <div class="clientname">
+            Dr.Jay&nbsp;&nbsp;
+        </div>
+    </div>
+    <!-- show the detail -->
+    <div class="mainbox">
+        <div class="detailbox">
+            <img src="../../public/image/pic_washinghands.jpg" alt="">
+            <form action="" method="psot">
+                <div class="shortinput">
+                    First Name
+                    <input readonly type="text" placeholder="Xiaomei">
+                </div>
+                <div class="shortinput">
+                    Last Name
+                    <input readonly type="text" placeholder="Wang">
+                </div>
+                <div class="longinput">
+                    Date of Birth
+                    <br>
+                    <input type="date">
+                </div>
+                <div class="longinput">
+                    Email
+                    <br>
+                    <input readonly type="email" placeholder="991@qq.com">
+                </div>
+                <input type="submit" value="Save" class="save">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<header class="headbar">
+        <!-- link web iftself for refreshing -->
+        {{#with clinician}}
+        <a href="/client/{{this._id}}/dashboard">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        <div class="clientname">
+            <h2>
+                <b>
+                    {{this.firstName}}
+                </b>
+            </h2>
+        </div>
+        
+        <!-- help new patient to register -->
+        <div class="registration_headbar">
+            <a href="/client/{{this._id}}/registerpatient">
+                <b>
+                    Registration
+                </b>
+            </a>
+        </div>
+        {{/with}}
+        <div class="comment_headbar">
+            <a href="">
+                <b>
+                    Comment
+                </b>
+            </a>
+        </div>
+    </header>
+    <main class="mainbox">
+        <!-- searching by name -->
+        <form action="" method="post" class="searching_form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Name" class="name" autocomplete="off">
+            <input type="submit" class="search_button" value="Search">
+        </form>
+        <div class="commentboard">
+            <table>
+                {{#each overall}}
+                <tr>
+                    {{#each this}}
+                    <td>
+                        <!-- go to patient page from onclike the name -->
+                        <a href="/client/{{this.client_id}}/{{this.patient_id}}/overview">{{this.first_name}}</a>
+                        <Span>{{this.date}}</Span>
+                        <div>
+                            {{this.comment}}
+                        </div>
+                    </td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </main>

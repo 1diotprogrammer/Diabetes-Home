@@ -1,0 +1,153 @@
+<!-- backgroud and the return buttom -->
+<div {{#if patient.darkmod}}class="gradientBackgroud gradientBackgroud_dark"{{else}}class="gradientBackgroud"{{/if}}>
+    <div {{#if patient.darkmod}} class="returnbutton returnbutton_dark"{{else}}class="returnbutton" {{/if}}>
+        {{#with patient}}
+        <a href="/patient/{{this._id}}/homepage">
+            {{/with}}
+            <b>
+                <i class="fas fa-angle-left"></i>
+            </b>
+        </a>
+    </div>
+    <div {{#if patient.darkmod}}class="logo logo_dark"{{else}}class="logo"{{/if}}>
+        {{#with patient}}
+        <a href="/patient/{{this._id}}/homepage">
+            {{/with}}
+            <b>
+                Diabetes@Home
+            </b>
+        </a>
+    </div>
+
+    <!-- patient name -->
+    <div class="nameRecordpage">
+        <b>
+            {{#with patient}}
+            <a href="/patient/{{this._id}}/personal_detail" {{#if this.darkmod}} class="patientname_pages patientname_pages_dark"{{else}}class="patientname_pages"{{/if}} >
+                <span> {{this.first_name}}</span>
+            </a>
+            
+            <a>
+                    <!-- <i class="fas fa-medal medalgrey"></i> -->
+                {{#if (overEighty this.percentage)}}
+                    <!-- <i class="fas fa-medal medalyellow"></i> -->
+                    <i class="fas fa-medal medal medalyellow">
+                        <div class="explain">
+                            If your engagement rate is over 80%, it will become a golden medal.
+                        </div>
+                    </i>
+                {{else}}
+                    <i class="fas fa-medal medal medalgrey">
+                        <div class="explain">
+                            If your engagement rate is over 80%, it will become a golden medal.
+                        </div>
+                    </i>
+                {{/if}}
+            </a>
+            {{/with}}
+        </b>
+    </div>
+    <!-- four kinds of data record button -->
+    {{#if patient.bgl_requested}}
+        {{#if (beFilled data.bgl)}}
+            <a href="">
+        {{else}}
+            {{#with patient}}
+            <a href="/patient/{{this._id}}/record/bgl">
+            {{/with}}
+        {{/if}}
+        {{#with data}}
+        <div {{#if (beFilled this.bgl)}}class="bloodglucoselevelRecordpageFilled"{{else}}class="bloodglucoselevelRecordpage"{{/if}}>
+            <b>
+                Blood Glucose Level
+            </b>
+        </div>
+        {{/with}}
+    </a>
+    {{else}}
+        <a href="">
+            <div class="bloodglucoselevelRecordpageFilled">
+            <b>
+                Blood Glucose Level
+            </b>
+            </div>
+        </a>
+    {{/if}}
+    {{#if patient.weight_requested}}
+        {{#if (beFilled data.weight)}}
+            <a href="">
+        {{else}}
+            {{#with patient}}
+            <a href="/patient/{{this._id}}/record/weight">
+            {{/with}}
+        {{/if}}
+            {{#with data}}
+            <div {{#if (beFilled this.weight)}}class="weightRecordpageFilled"{{else}}class="weightRecordpage"{{/if}}>
+                <b>
+                    Weight
+                </b>
+            </div>
+            {{/with}}
+        </a>
+    {{else}}
+        <a href="">
+            <div class="weightRecordpageFilled">
+                <b>
+                    Weight
+                </b>
+            </div>
+        </a>
+    {{/if}}
+
+    {{#if patient.dn_requested}}
+        {{#if (beFilled data.dn)}}
+            <a href="">
+        {{else}}
+            {{#with patient}}
+            <a href="/patient/{{this._id}}/record/dn">
+            {{/with}}
+        {{/if}}
+            {{#with data}}
+            <div {{#if (beFilled this.dn)}}class="dosenumberRecordpageFilled"{{else}}class="dosenumberRecordpage"{{/if}}>
+                <b>
+                    Dose Number
+                </b>
+            </div>
+            {{/with}}
+        </a>
+    {{else}}
+        <a href="">
+            <div class="dosenumberRecordpageFilled">
+                <b>
+                    Dose Number
+                </b>
+            </div>
+        </a>
+    {{/if}}
+
+    {{#if patient.exercise_requested}}
+        {{#if (beFilled data.exercise)}}
+            <a href="">
+        {{else}}
+            {{#with patient}}
+            <a href="/patient/{{this._id}}/record/exercise">
+            {{/with}}
+        {{/if}}
+            {{#with data}}
+            <div {{#if (beFilled this.exercise)}}class="exerciseRecordpageFilled"{{else}}class="exerciseRecordpage"{{/if}}>
+                <b>
+                    Exercise
+                </b>
+            </div>
+            {{/with}}
+        </a>
+    {{else}}
+        <a href="">
+            <div class="exerciseRecordpageFilled">
+                <b>
+                    Exercise
+                </b>
+            </div>
+        </a>
+    {{/if}}
+</div>

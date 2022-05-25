@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Client</title>
+
+    <!-- initialization -->
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../public/css/clearfix.css">
+    <link rel="stylesheet" href="../../public/css/font_icon6/css/all.css">
+
+    <link rel="stylesheet" href="../../public/css/client_headerbar.css">
+    <link rel="stylesheet" href="../../public/css/client_dashboard.css">
+
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+
+<body>
+    <header class="headbar">
+        <!-- link web iftself for refreshing -->
+        <a href="./client_dashboard.html">
+            <div class="logo">
+                <h3>
+                    <b>
+                        Diabetes
+                        <br>
+                        @Home
+                    </b>
+                </h3>
+            </div>
+        </a>
+        <div class="clientname">
+            <h2>
+                <b>
+                    Client Name
+                </b>
+            </h2>
+            <!-- Go back to the login page -->
+            <a href="" class="signout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+        </div>
+        <!-- help new patient to register -->
+        <div class="registration_headbar">
+            <a href="./client_registration.html">
+                <b>
+                    Registration
+                </b>
+            </a>
+        </div>
+        <div class="comment_headbar">
+            <a href="./client_overall_comment.html">
+                <b>
+                    Comment
+                </b>
+            </a>
+        </div>
+    </header>
+    <main class="main_dashboard">
+        <!-- searching by name -->
+        <form action="" method="post" class="searching_form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="name" placeholder="Name" autocomplete="off">
+            <input type="submit" class="search_button" value="Search">
+            <input type="submit" class="clear_button" value="Clear">
+            <!-- The list of people who did not update data today -->
+            <div>
+                <div class="registerboard">
+                    <b>
+                        Today's Absence
+                    </b>
+                    <div class="absencelist">
+                        <a href="./client_overview.html">
+                            <div>
+                                Micheal Jackson JJJJJJJJJJ
+                            </div>
+                        </a>
+                        <a href="./client_overview.html">
+                            <div>
+                                Lady Gaga
+                            </div>
+                        </a>
+                        <a href="./client_overview.html">
+                            <div>
+                                Lady Gaga
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                Lady Gaga
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                Lady Gaga
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                Lady Gaga
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                Lady Gaga
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                Lady Gaga
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                Lady Gaga
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- data table -->
+        <div class="data_dashboard">
+            <table class="datatable">
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Blood Glucose Level</th>
+                    <th>Weight</th>
+                    <th>Dose Number</th>
+                    <th>Exercise</th>
+                </tr>
+                <tr onClick="location.href='./client_overview.html'">
+                    <td>Billy Jin</td>
+                    <td>Apr/22/2020</td>
+                    <td>24 nmol/L</td>
+                    <td>90 kg</td>
+                    <td>1</td>
+                    <td>10000 steps</td>
+                </tr>
+                <tr onClick="location.href='client_overview.html'">
+                    <td>Micheal Jordan jjjjjjjjjj</td>
+                    <td>Sept/12/2022</td>
+                    <td>25 nmol/L</td>
+                    <td class="highlight">85 kg</td>
+                    <td>2</td>
+                    <td class="highlight">12000 steps</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <!-- total patient -->
+    <footer class="totalPatients">
+        Total: 90 patients
+    </footer>
+</body>
+
+</html>
