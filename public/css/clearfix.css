@@ -1,0 +1,7 @@
+/* Height Collapse Solving */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
