@@ -1,0 +1,147 @@
+.rankingboard {
+  margin: 10px auto;
+  width: 88%;
+  max-width: 1200px;
+  height: 650px;
+  background-color: white;
+  border-radius: 12px;
+  color: black;
+}
+
+.rank {
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+/* flex design for the ranking div */
+.firstplace,
+.secondplace,
+.thirdplace,
+.forthplace,
+.fifthplace,
+.yourplace {
+  margin: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.fifthplace {
+  padding-bottom: 0px;
+}
+
+/* own rank */
+.rankname {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* crown color */
+.gold {
+  color: goldenrod;
+}
+
+.silver {
+  color: silver;
+}
+
+.copper {
+  color: rgb(132, 45, 5);
+}
+
+/* responsive design */
+@media screen and (min-width: 550px) {
+  .rankingboard {
+    width: 65%;
+  }
+  .firstplace,
+  .secondplace,
+  .thirdplace,
+  .forthplace,
+  .fifthplace,
+  .yourplace {
+    font-size: 30px;
+    padding-bottom: 15px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .firstplace,
+  .secondplace,
+  .thirdplace,
+  .forthplace,
+  .fifthplace,
+  .yourplace {
+    padding: 0px 50px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .firstplace,
+  .secondplace,
+  .thirdplace,
+  .forthplace,
+  .fifthplace,
+  .yourplace {
+    padding: 0px 120px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .firstplace,
+  .secondplace,
+  .thirdplace,
+  .forthplace,
+  .fifthplace,
+  .yourplace {
+    padding: 0px 200px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .rankingboard {
+    height: 83.7%;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .rankingboard {
+    height: 750px;
+  }
+  .firstplace,
+  .secondplace,
+  .thirdplace,
+  .forthplace,
+  .fifthplace,
+  .yourplace {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .rankingboard {
+    height: 850px;
+  }
+  .rank {
+    font-size: 50px;
+  }
+  .firstplace,
+  .secondplace,
+  .thirdplace,
+  .forthplace,
+  .fifthplace,
+  .yourplace {
+    font-size: 35px;
+    padding-bottom: 35px;
+    line-height: 40px;
+  }
+}

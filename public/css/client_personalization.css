@@ -1,0 +1,94 @@
+.mainbox {
+  display: flex;
+}
+
+.requirementbox {
+  width: 90%;
+  height: 730px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  border: 2px black solid;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* data type */
+.requirement_title {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* data safe range */
+.requirement_title div {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+/* table flex style */
+.requirement_title div:nth-child(1) {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.requirement_title div:nth-child(2) {
+  flex-grow: 2;
+  text-align: center;
+}
+
+.bgl,
+.weight,
+.dn,
+.exercise {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 35px;
+  box-sizing: border-box;
+  border-top: 1px solid black;
+}
+
+.bgl input,
+.weight input,
+.dn input,
+.exercise input {
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* checkbox for the requirment data type */
+.checkbox {
+  height: 30px;
+  width: 30px;
+}
+
+.title {
+  width: 30%;
+  text-align: center;
+}
+
+.save {
+  width: 15%;
+  font-size: 35px;
+  border-radius: 12px;
+  font-weight: bolder;
+  background-color: rgb(76, 76, 76);
+  color: white;
+  margin-left: 64.8%;
+  margin-top: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* hover style */
+.save:hover {
+  text-decoration: underline;
+}
+
+input{
+  width: 300px;
+}

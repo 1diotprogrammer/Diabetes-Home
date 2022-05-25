@@ -1,0 +1,191 @@
+.main_dashboard {
+  width: 100%;
+  height: 900px;
+}
+
+/* float left searching */
+.searching_form {
+  width: 80%;
+  height: 120px;
+  line-height: 120px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.searching_form > i {
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.7);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.name,
+.search_button,
+.clear_button {
+  border-radius: 12px;
+  font-size: 35px;
+  margin-right: 20px;
+  vertical-align: middle;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  border-color: black;
+}
+
+.name {
+  width: 20%;
+  padding-left: 10px;
+}
+
+.search_button,
+.clear_button {
+  width: 13%;
+  background-color: rgb(65, 65, 255);
+  color: white;
+  font-weight: bolder;
+  border-color: rgba(0, 0, 255, 0.1);
+}
+
+.searching_form > div {
+  width: 19%;
+  float: right;
+}
+
+/* the button with dnamic effect */
+.registerboard {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  border: 2px white solid;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  display: inline-block;
+  line-height: 1.7;
+  vertical-align: middle;
+}
+
+.absencelist {
+  width: 19%;
+  border-radius: 12px;
+  position: absolute;
+  top: 90px;
+  background-color: rgb(65, 65, 255);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  display: none;
+
+  height: 500px;
+  overflow-y: auto;
+}
+
+.absencelist a {
+  text-decoration: none;
+}
+
+.absencelist div {
+  width: 90%;
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 50px;
+  text-align: center;
+  margin: 10px auto;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.registerboard:hover {
+  text-decoration: underline;
+}
+
+/* 
+when the absence list button is hover, 
+the list will show, and the name inside is liked to thier personal page 
+*/
+.registerboard:hover .absencelist {
+  display: block;
+}
+
+/* change style to show the hover */
+.absencelist div:hover {
+  background-color: white;
+  color: rgb(65, 65, 255);
+}
+
+/* if too much data, will be a scroll */
+.data_dashboard {
+  width: 80%;
+  height: 750px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.datatable {
+  width: 100%;
+}
+
+.datatable tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: black 1px solid;
+}
+
+.data_dashboard tr:nth-of-type(1) {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.data_dashboard td,
+.data_dashboard th {
+  width: 16%;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-size: 33px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.data_dashboard th {
+  font-size: 25px;
+  overflow: hidden;
+}
+
+/* every line have a hover style unless the title line */
+.datatable tr:not(:first-child):hover {
+  background-color: rgb(229, 229, 229);
+}
+
+.search_button:hover,
+.clear_button:hover {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 255, 0.9);
+  text-decoration: underline;
+}
+
+/* the data unsafe will be highlight and controll by js */
+.highlight {
+  box-sizing: border-box;
+  border: 5px red solid;
+}
+
+.totalPatients {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(229, 229, 229);
+  font-weight: bolder;
+}

@@ -1,0 +1,79 @@
+/* the menu with icon and title */
+.sidebar {
+  height: 1080px;
+  width: 16%;
+  background-color: rgb(76, 76, 76);
+  float: left;
+  overflow-x: hidden;
+}
+
+/* logo to back dashboard */
+.logo {
+  width: 60%;
+  color: white;
+  font-size: 40px;
+  font-style: italic;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  float: left;
+  padding: 10px;
+}
+
+.logo:hover {
+  text-decoration: underline;
+}
+
+.sidemenu {
+  width: 100%;
+  padding-top: 200px;
+}
+
+.sidemenu a {
+  text-decoration: none;
+}
+
+/* make font icons and the title in order and justified */
+.sidemenu > a > div {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 30px;
+  line-height: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  border-top: white 2px solid;
+  border-bottom: white 2px solid;
+  border-left: white 2px solid;
+}
+
+.sideicon {
+  height: 100%;
+  width: 50px;
+  text-align: center;
+}
+
+.sideicon,
+.sidetitle {
+  float: left;
+}
+
+.sideicon {
+  margin-left: 10px;
+}
+
+/* highlight the right border as a hover style */
+.sidemenu > a > div:hover {
+  border-right: 13px solid rgb(65, 65, 255);
+}
+
+/* the style for show which is the current page */
+.bluebar {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 30px;
+  line-height: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  border: white 2px solid;
+  border-right: 13px solid rgb(65, 65, 255);
+}

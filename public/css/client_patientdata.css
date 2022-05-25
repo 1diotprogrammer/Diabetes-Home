@@ -1,0 +1,53 @@
+/* if too much data, will be a scroll */
+.patientdata {
+  width: 75.5%;
+  height: 800px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  border: 2px black solid;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.datatable {
+  width: 100%;
+}
+
+.datatable tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: black 1px solid;
+}
+
+.patientdata tr:nth-of-type(1) {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.patientdata td,
+.patientdata th {
+  width: 16%;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-size: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.patientdata th {
+  font-size: 25px;
+  overflow: hidden;
+}
+
+/* every line have a hover style unless the title line */
+.datatable tr:not(:first-child):hover {
+  background-color: rgb(229, 229, 229);
+}
+
+/* the data unsafe will be highlight and controll by js */
+.highlight {
+  box-sizing: border-box;
+  border: 5px red solid;
+}

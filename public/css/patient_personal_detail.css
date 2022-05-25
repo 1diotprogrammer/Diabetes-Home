@@ -1,0 +1,202 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+form {
+  width: 88%;
+  max-width: 800px;
+  margin: 0px auto;
+  font-size: 24px;
+  line-height: 16px;
+  overflow-x: hidden;
+  padding-top: 5px;
+}
+
+input,
+textarea {
+  border-color: black;
+  border-radius: 12px;
+}
+
+/* make first name and last name in same line */
+.inputPersonalFirstName,
+.inputPersonalLastName {
+  width: 42.2%;
+}
+
+.personalLastName {
+  height: 82px;
+  margin-bottom: -50px;
+}
+
+@media screen and (max-height: 939px) {
+  .personalLastName {
+    position: relative;
+    top: -72px;
+    left: 55.3%;
+  }
+}
+
+/* make the input width same */
+.inputPersonalScreenName,
+.inputPersonalEmail,
+.inputTextBio {
+  width: 97.7%;
+}
+
+.inputPersonalBirth {
+  width: 98.5%;
+}
+
+.inputTextBio {
+  height: 60px;
+}
+
+/* make two button in one line */
+.savePersonalDetail,
+.resetpasswordPersonalDetail {
+  border-radius: 12px;
+  width: 47%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 17px;
+  background-color: rgb(65, 65, 255);
+  text-align: center;
+  float: left;
+  border: none;
+  font-weight: bolder;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.resetpasswordPersonalDetail {
+  margin-left: 5.7%;
+  margin-bottom: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* make color deeper as hover style */
+.savePersonalDetail:hover,
+.savePersonalDetail:active,
+.resetpasswordPersonalDetail:hover,
+.resetpasswordPersonalDetail:active {
+  text-decoration: underline;
+}
+
+input,
+textarea {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.signout {
+  border-radius: 12px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 17px;
+  background-color: rgba(255, 0, 0, 0.8);
+  text-align: center;
+  float: left;
+  border: none;
+  font-weight: bolder;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.signout:hover {
+  text-decoration: underline;
+}
+
+.datefont {
+  font-size: 13px;
+}
+
+/* responsive design */
+@media screen and (min-height: 940px) {
+  /* make short input become long */
+  .personalFirstName,
+  .personalLastName,
+  .inputPersonalFirstName,
+  .inputPersonalLastName {
+    width: 98.5%;
+  }
+  .personalFirstName {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .personalLastName {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  form {
+    font-size: 27px;
+  }
+  .savePersonalDetail,
+  .resetpasswordPersonalDetail {
+    width: 99%;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    float: none;
+  }
+  .signout {
+    float: none;
+  }
+}
+
+@media screen and (min-height: 1040px) {
+  form {
+    font-size: 30px;
+  }
+  .savePersonalDetail,
+  .resetpasswordPersonalDetail,
+  .signout {
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+ 
+@media screen and (min-height: 1070px) {
+  form {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  form {
+    width: 65%;
+  }
+  .inputPersonalFirstName,
+  .inputPersonalLastName {
+    width: 98%;
+  }
+  .inputPersonalScreenName,
+  .inputPersonalEmail,
+  .inputTextBio {
+    width: 98.2%;
+  }
+  .inputPersonalBirth {
+    width: 98.8%;
+  }
+  .savePersonalDetail,
+  .resetpasswordPersonalDetail {
+    width: 99%;
+  }
+  .signout {
+    width: 99%;
+  }
+}
+
+/* make short input become long */
+@media screen and (min-width: 980px) {
+  .inputPersonalFirstName,
+  .inputPersonalLastName {
+    width: 99.5%;
+  }
+}

@@ -1,0 +1,104 @@
+.nameHomepage {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 3%;
+}
+
+/* three buttons */
+.dataHomepage,
+.historyHomepage,
+.leaderboardHomepage {
+  background-color: rgb(65, 65, 255);
+  width: 69.3%;
+  max-width: 850px;
+  height: 64px;
+  margin: 55px auto;
+  text-align: center;
+  line-height: 64px;
+  font-size: 23px;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* a white border as hover style */
+.dataHomepage:hover,
+.historyHomepage:hover,
+.leaderboardHomepage:hover {
+  box-sizing: border-box;
+  border: 2px white solid;
+}
+
+/* message box */
+.messageboxHomepage {
+  background-color: white;
+  border: 1px black solid;
+  width: 69.3%;
+  max-width: 850px;
+  height: 23.6%;
+  margin: -10px auto;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+}
+
+.messageboxHomepage_title {
+  text-align: center;
+  text-decoration: underline;
+  margin: 5px 0px;
+  font-size: larger;
+}
+
+.messageboxHomepage_content {
+  padding: 10px;
+  height: 50%;
+  font-size: large;
+  text-align: justify;
+}
+
+.messageboxHomepage_date {
+  font-size: medium;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* responsive design */
+@media screen and (min-width: 550px) {
+  .messageboxHomepage_title {
+    font-size: 35px;
+  }
+  .messageboxHomepage_content {
+    font-size: 30px;
+  }
+  .messageboxHomepage_date {
+    font-size: 25px;
+  }
+  .dataHomepage,
+  .historyHomepage,
+  .leaderboardHomepage {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .dataHomepage,
+  .historyHomepage,
+  .leaderboardHomepage,
+  .messageboxHomepage {
+    width: 50%;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .dataHomepage,
+  .historyHomepage,
+  .leaderboardHomepage {
+    margin-bottom: 80px;
+    font-size: 35px;
+    height: 80px;
+    line-height: 80px;
+  }
+}

@@ -1,0 +1,73 @@
+.mainbox {
+  display: flex;
+}
+
+.detailbox {
+  width: 90%;
+  height: 800px;
+  margin: 0px auto;
+  box-sizing: border-box;
+}
+
+/* image */
+.detailbox > img {
+  width: 47%;
+  height: 800px;
+  float: right;
+}
+
+.detailbox > form {
+  width: 53%;
+  height: 800px;
+  font-size: 35px;
+  padding-top: 20px;
+}
+
+/* short input bar */
+.shortinput input {
+  width: 80%;
+  border-radius: 12px;
+  margin-top: 20px;
+  padding-left: 10px;
+  border-color: black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.shortinput {
+  width: 50%;
+  padding-top: 20px;
+  height: 120px;
+  float: left;
+}
+
+/* long input bar */
+.longinput {
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.longinput input {
+  width: 60%;
+  border-radius: 12px;
+  margin-top: 15px;
+  padding-left: 10px;
+  border-color: black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.save {
+  width: 30%;
+  border-radius: 12px;
+  float: right;
+  background-color: rgb(76, 76, 76);
+  color: white;
+  margin-right: 9%;
+  margin-top: 56px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* hover style */
+.save:hover {
+  text-decoration: underline;
+}

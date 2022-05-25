@@ -1,0 +1,155 @@
+/* 
+These four css paragraphes are sharing by the grey background pages, 
+including AboutDiabetes.html and AboutThisWebsite.html
+ */
+.greyBackground {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(57, 87, 120, 85%) 120px,
+    rgb(255, 255, 255) 812px
+  );
+  position: fixed;
+}
+
+.greyBackground a {
+  color: white;
+}
+
+.greyBackground .header {
+  font-size: 50px;
+  /* height: 10%; */
+  padding: 20px;
+  line-height: 80px;
+  position: absolute;
+  z-index: 99;
+}
+
+.greyBackground .logo {
+  font-size: 30px;
+  color: white;
+  height: 120px;
+  line-height: 120px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.greyBackground > div {
+  float: left;
+}
+
+/* css of AboutDiabetes.html*/
+.aboutDiabetes {
+  width: 90%;
+  height: 54%;
+  margin: 5%;
+  margin-top: 1.2%;
+  background-color: rgba(57, 87, 120, 85%);
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.aboutDiabetes_title {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.aboutDiabetes_content {
+  color: white;
+  font-size: 18px;
+  margin: 0 15px;
+  margin-bottom: 10px;
+  line-height: 23px;
+  text-align: justify;
+}
+
+/* css of AboutThisWebsite */
+.aboutThisWebsite {
+  width: 94.8%;
+  color: white;
+  text-align: right;
+  font-size: 30px;
+}
+
+.aboutThisWebsite > div {
+  float: right;
+  width: 35%;
+  min-width: 130px;
+  border: 2px white solid;
+}
+
+.aboutThisWebsite_image {
+  margin: 20px 5.333%;
+  width: 100%;
+}
+
+.aboutThisWebsite_image > img {
+  width: 89%;
+  max-width: 340px;
+  border-radius: 12px;
+}
+
+.aboutThisWebsite_content {
+  height: 24.63%;
+  margin: 0 5.333%;
+  padding: 10px 15px;
+  background-color: rgba(57, 87, 120, 60%);
+  border-radius: 12px;
+  font-size: 20px;
+  line-height: 25px;
+  color: white;
+  text-align: justify;
+  overflow: auto;
+}
+
+.bluelink {
+  color: blue !important;
+}
+
+/* the links to other website have a blue underline */
+.aboutDiabetes_content a {
+  color: blue;
+}
+
+.aboutThisWebsite_creator {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  line-height: 21px;
+  position: fixed;
+  top: 90%;
+}
+
+@media screen and (min-width: 550px) {
+  .greyBackground .logo {
+    font-size: 55px;
+  }
+
+  .aboutDiabetes_title {
+    font-size: 55px;
+  }
+  .aboutDiabetes_content,
+  .aboutThisWebsite_content {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .aboutThisWebsite_creator {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-height: 1000px) and (min-width: 550px) {
+  .aboutThisWebsite {
+    font-size: 45px;
+  }
+}

@@ -1,0 +1,108 @@
+a {
+  text-decoration: none;
+}
+
+.nameRecordpage {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 3%;
+}
+
+/* four same button style with order */
+.bloodglucoselevelRecordpage,
+.weightRecordpage,
+.dosenumberRecordpage,
+.exerciseRecordpage {
+  background-color: rgb(65, 65, 255);
+  width: 69.3%;
+  max-width: 850px;
+  height: 64px;
+  margin: 55px auto;
+  text-align: center;
+  line-height: 64px;
+  font-size: 23px;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* white border as hover style */
+.bloodglucoselevelRecordpage:hover,
+.weightRecordpage:hover,
+.dosenumberRecordpage:hover,
+.exerciseRecordpage:hover {
+  box-sizing: border-box;
+  border: 2px white solid;
+}
+
+/* if dont need, color become grey, controll by js */
+.bloodglucoselevelRecordpageFilled,
+.weightRecordpageFilled,
+.dosenumberRecordpageFilled,
+.exerciseRecordpageFilled {
+  background-color: rgba(100, 100, 100, 0.65);
+  width: 69.3%;
+  max-width: 850px;
+  height: 64px;
+  margin: 55px auto;
+  text-align: center;
+  line-height: 64px;
+  font-size: 23px;
+  color: white;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 550px) {
+  .bloodglucoselevelRecordpage,
+  .weightRecordpage,
+  .dosenumberRecordpage,
+  .exerciseRecordpage,
+  .bloodglucoselevelRecordpageFilled,
+  .weightRecordpageFilled,
+  .dosenumberRecordpageFilled,
+  .exerciseRecordpageFilled {
+    font-size: 30px;
+    width: 55%;
+  }
+}
+
+/* responsive design */
+@media screen and (min-height: 900px) and (min-width: 650px) {
+  .bloodglucoselevelRecordpage,
+  .weightRecordpage,
+  .dosenumberRecordpage,
+  .exerciseRecordpage,
+  .bloodglucoselevelRecordpageFilled,
+  .weightRecordpageFilled,
+  .dosenumberRecordpageFilled,
+  .exerciseRecordpageFilled {
+    margin-bottom: 90px;
+    font-size: 35px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (min-height: 960px) {
+  .bloodglucoselevelRecordpage,
+  .weightRecordpage,
+  .dosenumberRecordpage,
+  .exerciseRecordpage,
+  .bloodglucoselevelRecordpageFilled,
+  .weightRecordpageFilled,
+  .dosenumberRecordpageFilled,
+  .exerciseRecordpageFilled {
+    margin-bottom: 110px;
+    height: 80px;
+    line-height: 80px;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .nameRecordpage {
+    margin-top: 50px;
+  }
+  .nameRecordpage {
+    font-size: 55px;
+  }
+}

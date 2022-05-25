@@ -1,0 +1,112 @@
+/* float left searching */
+.searching_form {
+  width: 80%;
+  height: 120px;
+  line-height: 120px;
+  margin: 0px auto;
+}
+
+.searching_form > i {
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.7);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.name,
+.search_button {
+  border-radius: 12px;
+  font-size: 35px;
+  margin-right: 20px;
+  vertical-align: middle;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  border-color: black;
+}
+
+.name {
+  width: 20%;
+  padding-left: 10px;
+}
+
+.search_button {
+  width: 13%;
+  background-color: rgb(65, 65, 255);
+  color: white;
+  font-weight: bolder;
+  border-color: rgba(0, 0, 255, 0.1);
+}
+
+/* hover style */
+.search_button:hover {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 255, 0.9);
+  text-decoration: underline;
+}
+
+/* table board */
+.commentboard {
+  width: 80%;
+  height: 750px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.commentboard table {
+  width: 100%;
+  height: 750px;
+}
+
+.commentboard tr {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.commentboard td {
+  height: 250px;
+  width: 22.5%;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* the name in table go to the patient overview pages */
+.commentboard a {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bolder;
+  padding-left: 25px;
+}
+
+/* hover style */
+.commentboard a:hover {
+  text-decoration: underline;
+}
+
+.commentboard div {
+  font-size: 25px;
+  line-height: 25px;
+  padding: 10px;
+  padding-top: 0px;
+  margin-bottom: 15px;
+  text-align: justify;
+
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden;
+}
+
+/* use different font-size as the layout */
+.commentboard span {
+  font-size: 20px;
+  line-height: 30px;
+  padding-left: 10px;
+}

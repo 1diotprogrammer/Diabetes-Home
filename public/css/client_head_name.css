@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(229, 229, 229);
+}
+
+/* doctor name at right top */
+.headname {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* flex-end to stay at bottom */
+.patientname {
+  display: flex;
+  align-items: flex-end;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.clientname {
+  float: right;
+  font-size: 45px;
+  height: 50px;
+  border-bottom: 1px black solid;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  width: 400px;
+  text-align: right;
+  font-weight: bolder;
+}
